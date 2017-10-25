@@ -1,26 +1,12 @@
-vim:
+install_packages:
   pkg.installed:
-    - name: vim
-    
-zsh:
-  pkg.installed:
-    - name: zsh
-
-nginx:
-  pkg.installed:
-    - name: nginx
-    
-php-fpm:
-  pkg.installed:
-    - name: php-fpm
-    
-nodejs:
-  pkg.installed:
-    - name: nodejs
-    
-ufw:
-  pkg.installed:
-    - name: ufw
+    - pkgs:
+      - vim
+      - zsh
+      - nginx
+      - php-fpm
+      - ufw
+      - nodejs
 
 useradd:
   user.present:
@@ -30,14 +16,14 @@ useradd:
     - groups:
       - wheel
       
-create_rootdir:
+create_nginx_rootdir:
   file.directory:
     - name: /var/www/local
     - user: http
     - group: http
     - mode: 0644
 
-create_vhostdir:
+create_nginx_vhostdir:
   file.directory:
     - name: /etc/nginx/vhost.d
     - user: http
