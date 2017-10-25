@@ -46,5 +46,5 @@ All done !!! Enjoy !!!
 ## Option Zsh and Vim config
 my dotfiles setup ;) (All auto config Zsh and Vim.)
 ``` shell
-curl -L https://github.com/2vg/dotfiles/raw/master/install.sh | bash
+curl -L https://github.com/2vg/dotfiles/raw/master/install.sh | sh
 ```

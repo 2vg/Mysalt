@@ -62,8 +62,8 @@ vhost_conf:
   
 fpm_conf:
   file.managed:
-    - name: /etc/php/conf.d/www.conf
-    - source: ./files/php-fpm/www.conf
+    - name: /etc/php/conf.d/zzz.conf
+    - source: ./files/php-fpm/zzz.conf
     - mode: 0644
     - user: http
     - group: http
